@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+	<style type="text/css">
+	
+		#playcontrols {
+			text-align: center;
+			margin-top: 50px;
+		}
+		#playcontrols #activityindicator, #playcontrols #stopbutton {
+			display: none;
+		}
+		
+		#textpositiondiv {
+			margin-top: 100px;
+		}
+	.img { width: 80px;
+height :80px}
+	</style>
+	<script type="text/javascript" charset="utf-8" src="scripts/html5audio.js"></script>
+  </head>
+  <body>
+	  <h2>Example HTML5 Audio Streamer app</h2>
+  	  <div id="playcontrols">
+		  <a href="#" id="playbutton" onClick="html5audio.play();return false;"><img src="images/playbutton.png" /></a>
+		  <a href="#" id="activityindicator" onClick="html5audio.stop();return false;"><img src="images/activityindicator.gif" /></a>
+		  <a href="#" id="stopbutton" onClick="html5audio.stop();return false;"><img src="images/stopbutton.png" /></a>
+	  </div>
+	  <div id="textpositiondiv">Time played: <span id="textposition">stopped</span></div>
+	  <script type="text/javascript">
+		  playButton = document.getElementById('playbutton');
+		  stopButton = document.getElementById('stopbutton');
+		  activityIndicator = document.getElementById('activityindicator');
+		  textPosition = document.getElementById('textposition');
+	  </script>
+	 <table>
+    <tr>
+    <th><a href="#" id="playbutton" onClick="html5audio.play('http://91.121.4.107:8000/radio_plus_agadir.mp3');return false;" data-location="http://91.121.4.107:8000/radio_plus_agadir.mp3"><img src="Radio-plus-Agadir.jpg" class="img"></img></a><br></th>
+	<th><a href="#" id="playbutton" onClick="html5audio.play('http://streaming.radionomy.com:8000/FRANCE80');return false;" data-location="http://streaming.radionomy.com:8000/FRANCE80"><img src="Radio-plus-Agadir.jpg" class="img"></img></a><br><th>
+  </tr>
+  <tr>
+    <td>Contenu 1</td><td>Contenu 2</td>
+  </tr>
+</table>
+  </body>
+</html>
